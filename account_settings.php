@@ -81,6 +81,9 @@ if (isset($_POST['update_password'])) {
 
 <div class="settings-container">
     <div class="sidebar">
+        <div class="logo-container">
+            <img src="images/make_cents_logo.png" alt="Logo" class="logo">
+        </div>
         <h2>Account Settings</h2>
         <ul>
             <li><a href="account_settings.php?action=username">Change Username</a></li>
