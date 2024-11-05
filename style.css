@@ -344,13 +344,16 @@ header{
     font-family: var(--typography-text-medium-l);
 }
 
+/* All CSS code for account settings. */
+
 .settings-container {
     display: flex;
-    min-height: 100vh;
+    max-width: 600px;
+    text-align: left;
 }
 
 .sidebar {
-    background-color: #44bf99;
+    background-color: #2fa674;
     padding: 30px;
     width: 200px;
     height: 100%;
@@ -362,7 +365,7 @@ header{
 }
 
 .sidebar h2 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
     margin-top: 25px;
 }
@@ -377,7 +380,7 @@ header{
 }
 
 .sidebar ul li a {
-    color: black;
+    color: white;
     font-weight: 400;
     text-decoration: none;
     font-size: 16px;
@@ -388,7 +391,7 @@ header{
 }
 
 .sidebar ul li a:hover {
-    color: #fff;
+    text-decoration: underline;
 }
 
 .content {
@@ -400,6 +403,7 @@ header{
 
 .content h2 {
     margin-bottom: 20px;
+    font-size: xx-large;
     text-align: center;
     color: #34495e;
 }
@@ -515,4 +519,13 @@ header{
 .fade-content {
     opacity: 1;
     transition: opacity 1.5s ease-in-out;
+}
+
+.login-container {
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 130px;
+    height: auto;
 }
