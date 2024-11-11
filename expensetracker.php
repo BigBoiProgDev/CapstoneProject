@@ -168,6 +168,7 @@ while ($row = mysqli_fetch_assoc($category_result)) {
         }
         .delete-button:hover {
             background-color: #d9534f;
+            transform: scale(1.05);
         }
         .section-content, .expense-form, .edit-expense-form, .category-form {
             display: none;
@@ -177,6 +178,20 @@ while ($row = mysqli_fetch_assoc($category_result)) {
         .section-content.active, .expense-form.active, .edit-expense-form.active, .category-form.active {
             display: block;
             opacity: 1;
+        }
+        .edit-btn {
+            padding: 8px 12px;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .edit-btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -210,7 +225,7 @@ while ($row = mysqli_fetch_assoc($category_result)) {
                                 <div>Date: <?php echo $expense['expense_date']; ?></div>
                                 <div>Description: <?php echo $expense['description']; ?></div>
                                 <div>Amount Spent: <span class="amount">₱<?php echo $expense['amount']; ?></span></div>
-                                <button onclick="showEditForm('<?php echo $expense['id']; ?>')">Edit</button>
+                                <button class="edit-btn" onclick="showEditForm('<?php echo $expense['id']; ?>')">Edit</button>
                                 <form action="delete_expense.php" method="POST" style="display:inline;">
                                     <input type="hidden" name="expense_id" value="<?php echo $expense['id']; ?>">
                                     <button type="submit" class="delete-button">Delete</button>
